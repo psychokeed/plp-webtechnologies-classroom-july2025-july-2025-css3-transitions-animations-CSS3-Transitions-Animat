@@ -1,0 +1,59 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 50px;
+  background: #f4f4f9;
+}
+
+/* Part 1: Button hover effect */
+#hoverBtn {
+  padding: 10px 20px;
+  background: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+#hoverBtn:hover {
+  transform: scale(1.2);
+  background: #2980b9;
+}
+
+/* Box for animation */
+.box {
+  width: 100px;
+  height: 100px;
+  background: tomato;
+  margin: 30px auto;
+  transition: transform 0.5s ease;
+}
+
+/* Animation class triggered by JS */
+.box.animate {
+  transform: translateY(100px) rotate(45deg);
+}
+
+/* Popup modal */
+.popup {
+  display: none;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border: 2px solid #333;
+  animation: fadeIn 0.5s ease;
+}
+
+/* Keyframe animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, -60%); }
+  to   { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+.show {
+  display: block;
+}
